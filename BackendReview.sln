@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendReview.API", "BackendReview.API\BackendReview.API.csproj", "{ECDEE64A-4892-4D15-8A96-C6322399BE4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendReview.DAL", "BackendReview.DAL\BackendReview.DAL.csproj", "{AF12DC4E-9D78-4E24-B018-6650AF1355D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECDEE64A-4892-4D15-8A96-C6322399BE4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECDEE64A-4892-4D15-8A96-C6322399BE4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECDEE64A-4892-4D15-8A96-C6322399BE4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECDEE64A-4892-4D15-8A96-C6322399BE4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF12DC4E-9D78-4E24-B018-6650AF1355D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF12DC4E-9D78-4E24-B018-6650AF1355D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF12DC4E-9D78-4E24-B018-6650AF1355D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF12DC4E-9D78-4E24-B018-6650AF1355D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
