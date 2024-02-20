@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackendReview.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad4cf4511c95ad6a382ad3582fa321536fe4932c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackendReview.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackendReview.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

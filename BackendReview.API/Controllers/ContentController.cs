@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackendReview.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BackendReview.API.Controllers
 {
@@ -21,7 +22,8 @@ namespace BackendReview.API.Controllers
         }
 
         // GET: api/Content
-        [HttpGet]
+        [HttpGet] 
+        [Authorize]
         public async Task<ActionResult<IEnumerable<Content>>> GetContents()
         {
             return await _context.Contents.Include(v => v.Variety).Include(g => g.GamePlatform).ToListAsync();
