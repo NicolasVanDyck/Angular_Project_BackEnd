@@ -87,6 +87,7 @@ namespace BackendReview.API.Controllers
 
         // DELETE: api/Content/5
         [HttpDelete("{id}")]
+        [Authorize(Policy = "DeleteAccess")]
         public async Task<IActionResult> DeleteContent(int id)
         {
             var content = await _context.Contents.FindAsync(id);
