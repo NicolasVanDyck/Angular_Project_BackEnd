@@ -11,5 +11,5 @@ public partial class Platform
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual ICollection<GamePlatform> GamePlatforms { get; set; } = new List<GamePlatform>();
+    public  ICollection<GamePlatform>? GamePlatforms { get; set; } = new List<GamePlatform>();
 }

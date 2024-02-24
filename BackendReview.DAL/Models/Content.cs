@@ -19,7 +19,7 @@ public partial class Content
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual GamePlatform GamePlatform { get; set; } = null!;
+    public  GamePlatform? GamePlatform { get; set; } = null!;
 
-    public virtual Variety Variety { get; set; } = null!;
+    public  Variety? Variety { get; set; } = null!;
 }

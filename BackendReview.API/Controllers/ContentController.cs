@@ -23,7 +23,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Content
         [HttpGet] 
-        [Authorize]
+        // [Authorize]
         public async Task<ActionResult<IEnumerable<Content>>> GetContents()
         {
             return await _context.Contents.Include(v => v.Variety).Include(g => g.GamePlatform).ToListAsync();
@@ -87,7 +87,7 @@ namespace BackendReview.API.Controllers
 
         // DELETE: api/Content/5
         [HttpDelete("{id}")]
-        [Authorize(Policy = "DeleteAccess")]
+        // [Authorize(Policy = "DeleteAccess")]
         public async Task<IActionResult> DeleteContent(int id)
         {
             var content = await _context.Contents.FindAsync(id);
