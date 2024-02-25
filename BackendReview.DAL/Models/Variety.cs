@@ -11,5 +11,5 @@ public partial class Variety
 
     public DateTime CreatedAt { get; set; }
 
-    public  ICollection<Content>? Contents { get; set; } = new List<Content>();
+    public ICollection<Content>? Contents { get; set; }
 }

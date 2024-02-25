@@ -19,8 +19,6 @@ public partial class ReviewDbContext : DbContext
 
     public virtual DbSet<Game> Games { get; set; }
 
-    public virtual DbSet<GamePlatform> GamePlatforms { get; set; }
-
     public virtual DbSet<Platform> Platforms { get; set; }
 
     public virtual DbSet<Variety> Varieties { get; set; }
@@ -37,7 +35,7 @@ public partial class ReviewDbContext : DbContext
 
             entity.ToTable("Content");
 
-            entity.HasIndex(e => e.GamePlatformId, "gamePlatformId");
+            entity.HasIndex(e => e.GameId, "gameId");
 
             entity.HasIndex(e => e.VarietyId, "varietyId");
 
@@ -48,18 +46,18 @@ public partial class ReviewDbContext : DbContext
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("timestamp")
                 .HasColumnName("createdAt");
-            entity.Property(e => e.GamePlatformId).HasColumnName("gamePlatformId");
+            entity.Property(e => e.GameId).HasColumnName("gameId");
             entity.Property(e => e.Score).HasColumnName("score");
             entity.Property(e => e.UserId).HasColumnName("userId");
             entity.Property(e => e.VarietyId).HasColumnName("varietyId");
 
-            entity.HasOne(d => d.GamePlatform).WithMany(p => p.Contents)
-                .HasForeignKey(d => d.GamePlatformId)
-                .HasConstraintName("Content_ibfk_1");
+            entity.HasOne(d => d.Game).WithMany(p => p.Contents)
+                .HasForeignKey(d => d.GameId)
+                .HasConstraintName("Content_ibfk_2");
 
             entity.HasOne(d => d.Variety).WithMany(p => p.Contents)
                 .HasForeignKey(d => d.VarietyId)
-                .HasConstraintName("Content_ibfk_2");
+                .HasConstraintName("Content_ibfk_1");
         });
 
         modelBuilder.Entity<Game>(entity =>
@@ -68,6 +66,8 @@ public partial class ReviewDbContext : DbContext
 
             entity.ToTable("Game");
 
+            entity.HasIndex(e => e.PlatformId, "platformId");
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasColumnType("timestamp")
@@ -75,38 +75,14 @@ public partial class ReviewDbContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
                 .HasColumnName("name");
+            entity.Property(e => e.PlatformId).HasColumnName("platformId");
             entity.Property(e => e.Publisher)
                 .HasMaxLength(255)
                 .HasColumnName("publisher");
-        });
 
-        modelBuilder.Entity<GamePlatform>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PRIMARY");
-
-            entity.ToTable("GamePlatform");
-
-            entity.HasIndex(e => e.GameId, "gameId");
-
-            entity.HasIndex(e => e.PlatformId, "platformId");
-
-            entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.CreatedAt)
-                .HasColumnType("timestamp")
-                .HasColumnName("createdAt");
-            entity.Property(e => e.GameId).HasColumnName("gameId");
-            entity.Property(e => e.PlatformId).HasColumnName("platformId");
-            entity.Property(e => e.ReleaseDate)
-                .HasColumnType("date")
-                .HasColumnName("releaseDate");
-
-            entity.HasOne(d => d.Game).WithMany(p => p.GamePlatforms)
-                .HasForeignKey(d => d.GameId)
-                .HasConstraintName("GamePlatform_ibfk_1");
-
-            entity.HasOne(d => d.Platform).WithMany(p => p.GamePlatforms)
+            entity.HasOne(d => d.Platform).WithMany(p => p.Games)
                 .HasForeignKey(d => d.PlatformId)
-                .HasConstraintName("GamePlatform_ibfk_2");
+                .HasConstraintName("Game_ibfk_1");
         });
 
         modelBuilder.Entity<Platform>(entity =>

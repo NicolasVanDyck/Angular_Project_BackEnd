@@ -17,7 +17,6 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.0",
           "MySql.EntityFrameworkCore": "8.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.0-beta.2",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -1525,17 +1524,6 @@
           }
         }
       },
-      "MySqlConnector/2.3.1": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/MySqlConnector.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.3.1.0"
-          }
-        }
-      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -1642,18 +1630,6 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {
             "assemblyVersion": "6.3.1.1",
             "fileVersion": "6.3.1.1"
-          }
-        }
-      },
-      "Pomelo.EntityFrameworkCore.MySql/8.0.0-beta.2": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "8.0.0",
-          "MySqlConnector": "2.3.1"
-        },
-        "runtime": {
-          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.0.0"
           }
         }
       },
@@ -2925,13 +2901,6 @@
       "path": "mysql.entityframeworkcore/8.0.0",
       "hashPath": "mysql.entityframeworkcore.8.0.0.nupkg.sha512"
     },
-    "MySqlConnector/2.3.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FYTnvNBbNSZotSWUerK22Ztsc3vx3wBRZ4veavkUbfCBNthtCr3CH5Wpoo4l5gBD2TmQD9JbL33Gf9kWko1yYw==",
-      "path": "mysqlconnector/2.3.1",
-      "hashPath": "mysqlconnector.2.3.1.nupkg.sha512"
-    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -3001,13 +2970,6 @@
       "sha512": "sha512-T/igBDLXCd+pH3YTWgGVNvYSOwbwaT30NyyM9ONjvlHlmaUjKBJpr9kH0AeL+Ado4EJsBhU3qxXVc6lyrpRcMw==",
       "path": "nuget.versioning/6.3.1",
       "hashPath": "nuget.versioning.6.3.1.nupkg.sha512"
-    },
-    "Pomelo.EntityFrameworkCore.MySql/8.0.0-beta.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rWLS2sdiMmVRAkFeKvGWeuYrEVpqGidK+K9yahbWu7SUMC372GW9KANIegv3YMM0GkvDITyR7gBes1+MUqy1oA==",
-      "path": "pomelo.entityframeworkcore.mysql/8.0.0-beta.2",
-      "hashPath": "pomelo.entityframeworkcore.mysql.8.0.0-beta.2.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "type": "package",

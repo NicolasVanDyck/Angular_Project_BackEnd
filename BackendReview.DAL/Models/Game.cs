@@ -11,7 +11,11 @@ public partial class Game
 
     public string Publisher { get; set; } = null!;
 
+    public int PlatformId { get; set; }
+
     public DateTime CreatedAt { get; set; }
 
-    public  ICollection<GamePlatform>? GamePlatforms { get; set; } = new List<GamePlatform>();
+    public ICollection<Content>? Contents { get; set; }
+
+    public  Platform? Platform { get; set; }
 }

@@ -11,7 +11,7 @@ public partial class Content
 
     public int Score { get; set; }
 
-    public int GamePlatformId { get; set; }
+    public int GameId { get; set; }
 
     public int VarietyId { get; set; }
 
@@ -19,7 +19,7 @@ public partial class Content
 
     public DateTime CreatedAt { get; set; }
 
-    public  GamePlatform? GamePlatform { get; set; } = null!;
+    public  Game? Game { get; set; }
 
-    public  Variety? Variety { get; set; } = null!;
+    public  Variety? Variety { get; set; }
 }

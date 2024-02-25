@@ -8,24 +8,7 @@ public class DbInitializer
         context.Database.EnsureCreated();
 
         // Check if any data exists, if not, seed the database
-
-        if (!context.Games.Any())
-        {
-            var games = new Game[]
-            {
-                new Game { Name = "Game 1", Publisher = "Publisher 1", CreatedAt = DateTime.Now},
-                new Game { Name = "Game 2", Publisher = "Publisher 2", CreatedAt = DateTime.Now},
-                // Add more games as needed
-            };
-
-            foreach (Game game in games)
-            {
-                context.Games.Add(game);
-            }
-
-            context.SaveChanges();
-        }
-
+        
         if (!context.Platforms.Any())
         {
             var platforms = new Platform[]
@@ -42,19 +25,19 @@ public class DbInitializer
 
             context.SaveChanges();
         }
-        
-        if (!context.GamePlatforms.Any())
+
+        if (!context.Games.Any())
         {
-            var gamePlatforms = new GamePlatform[]
+            var games = new Game[]
             {
-                new GamePlatform { GameId = 1, PlatformId = 1, ReleaseDate = DateTime.Now ,CreatedAt = DateTime.Now },
-                new GamePlatform { GameId = 2, PlatformId = 2, ReleaseDate = DateTime.Now ,CreatedAt = DateTime.Now },
-                // Add more game-platform relationships as needed
+                new Game { Name = "Game 1", Publisher = "Publisher 1", PlatformId = 1, CreatedAt = DateTime.Now},
+                new Game { Name = "Game 2", Publisher = "Publisher 2", PlatformId = 2, CreatedAt = DateTime.Now},
+                // Add more games as needed
             };
 
-            foreach (GamePlatform gamePlatform in gamePlatforms)
+            foreach (Game game in games)
             {
-                context.GamePlatforms.Add(gamePlatform);
+                context.Games.Add(game);
             }
 
             context.SaveChanges();
@@ -81,8 +64,8 @@ public class DbInitializer
         {
             var contents = new Content[]
             {
-                new Content { Body = "Review 1", Score = 5, GamePlatformId = 1, VarietyId = 1, UserId = 1, CreatedAt = DateTime.Now },
-                new Content { Body = "Review 2", Score = 4, GamePlatformId = 2, VarietyId = 2, UserId = 2, CreatedAt = DateTime.Now },
+                new Content { Body = "Review 1", Score = 5, GameId = 1, VarietyId = 1, UserId = 1, CreatedAt = DateTime.Now },
+                new Content { Body = "Review 2", Score = 4, GameId = 2, VarietyId = 2, UserId = 2, CreatedAt = DateTime.Now },
                 // Add more content as needed
             };
 
