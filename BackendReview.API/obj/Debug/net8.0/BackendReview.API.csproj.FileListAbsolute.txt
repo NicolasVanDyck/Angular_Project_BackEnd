@@ -11,7 +11,6 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/K4os.Compression.LZ4.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/K4os.Compression.LZ4.Streams.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/K4os.Hash.xxHash.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.AspNetCore.Razor.Language.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.Bcl.AsyncInterfaces.dll
@@ -36,12 +35,6 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Relational.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.Extensions.DependencyModel.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.NET.StringTools.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.OpenApi.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -55,6 +48,7 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Mono.TextTemplating.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/MySql.Data.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/MySql.EntityFrameworkCore.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/MySqlConnector.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Newtonsoft.Json.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/NuGet.Common.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/NuGet.Configuration.dll
@@ -65,6 +59,7 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/NuGet.ProjectModel.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/NuGet.Protocol.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/NuGet.Versioning.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/SQLitePCLRaw.batteries_v2.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/SQLitePCLRaw.core.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/SQLitePCLRaw.provider.e_sqlite3.dll
@@ -79,7 +74,6 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Composition.TypedParts.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Drawing.Common.dll
-/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Reflection.MetadataLoadContext.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll
 /home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.Security.Permissions.dll
@@ -277,3 +271,11 @@
 /home/nicolas/Projects/Review/Backend/BackendReview.API/obj/Debug/net8.0/BackendReview.API.pdb
 /home/nicolas/Projects/Review/Backend/BackendReview.API/obj/Debug/net8.0/BackendReview.API.genruntimeconfig.cache
 /home/nicolas/Projects/Review/Backend/BackendReview.API/obj/Debug/net8.0/ref/BackendReview.API.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/nicolas/Projects/Review/Backend/BackendReview.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll

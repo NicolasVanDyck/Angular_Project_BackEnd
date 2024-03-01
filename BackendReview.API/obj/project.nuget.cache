@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IWFQ2LWMNIq6Sbw/tNu/IxWtkJ0bflSwuNBAAp6Vu/N8FYP1rPKullF6Vj8CXSlr3jd4zn+q9lq5DRx8bdc4Hg==",
+  "dgSpecHash": "cAH9tjxZEErKIzrntGMMBB4gZ1Ulori/r055l8MEID23tZLFLdD16t1AsleJMBgf7Lzxg2crQiHUnNxsJlBHNg==",
   "success": true,
-  "projectFilePath": "/home/nicolas/Projects/Review/Backend/BackendReview.API/BackendReview.API.csproj",
+  "projectFilePath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/BackendReview.API.csproj",
   "expectedPackageFiles": [
     "/home/nicolas/.nuget/packages/bouncycastle.cryptography/2.2.1/bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "/home/nicolas/.nuget/packages/google.protobuf/3.25.1/google.protobuf.3.25.1.nupkg.sha512",
@@ -176,8 +176,7 @@
     "/home/nicolas/.nuget/packages/system.threading.tasks.dataflow/7.0.0/system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "/home/nicolas/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/home/nicolas/.nuget/packages/system.windows.extensions/7.0.0/system.windows.extensions.7.0.0.nupkg.sha512",
-    "/home/nicolas/.nuget/packages/zstdsharp.port/0.7.1/zstdsharp.port.0.7.1.nupkg.sha512",
-    "/home/nicolas/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+    "/home/nicolas/.nuget/packages/zstdsharp.port/0.7.1/zstdsharp.port.0.7.1.nupkg.sha512"
   ],
   "logs": []
 }
