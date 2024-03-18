@@ -17,9 +17,11 @@ public partial class Content
 
     public int UserId { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
-    public  Game? Game { get; set; }
+    public DateTime? UpdatedAt { get; set; }
 
-    public  Variety? Variety { get; set; }
+    public  Game? Game { get; set; } = null!;
+
+    public  Variety? Variety { get; set; } = null!;
 }

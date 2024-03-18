@@ -9,7 +9,9 @@ public partial class Platform
 
     public string Name { get; set; } = null!;
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
-    public virtual ICollection<Game>? Games { get; set; } = new List<Game>();
+    public DateTime? UpdatedAt { get; set; }
+
+    public  ICollection<Game>? Games { get; set; }
 }

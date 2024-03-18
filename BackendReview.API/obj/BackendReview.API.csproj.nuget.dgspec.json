@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/BackendReview.API.csproj": {}
+    "/home/nicolas/Projects/Review/Backend/BackendReview.API/BackendReview.API.csproj": {}
   },
   "projects": {
-    "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/BackendReview.API.csproj": {
+    "/home/nicolas/Projects/Review/Backend/BackendReview.API/BackendReview.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/BackendReview.API.csproj",
+        "projectUniqueName": "/home/nicolas/Projects/Review/Backend/BackendReview.API/BackendReview.API.csproj",
         "projectName": "BackendReview.API",
-        "projectPath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/BackendReview.API.csproj",
+        "projectPath": "/home/nicolas/Projects/Review/Backend/BackendReview.API/BackendReview.API.csproj",
         "packagesPath": "/home/nicolas/.nuget/packages/",
-        "outputPath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.API/obj/",
+        "outputPath": "/home/nicolas/Projects/Review/Backend/BackendReview.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nicolas/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/BackendReview.DAL.csproj": {
-                "projectPath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/BackendReview.DAL.csproj"
+              "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/BackendReview.DAL.csproj": {
+                "projectPath": "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/BackendReview.DAL.csproj"
               }
             }
           }
@@ -74,7 +74,7 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
@@ -102,18 +102,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/BackendReview.DAL.csproj": {
+    "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/BackendReview.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/BackendReview.DAL.csproj",
+        "projectUniqueName": "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/BackendReview.DAL.csproj",
         "projectName": "BackendReview.DAL",
-        "projectPath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/BackendReview.DAL.csproj",
+        "projectPath": "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/BackendReview.DAL.csproj",
         "packagesPath": "/home/nicolas/.nuget/packages/",
-        "outputPath": "/home/nicolas/Projects/Review/BackendBetter/BackendReview/BackendReview.DAL/obj/",
+        "outputPath": "/home/nicolas/Projects/Review/Backend/BackendReview.DAL/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nicolas/.nuget/NuGet/NuGet.Config"
@@ -160,7 +160,7 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "MySql.EntityFrameworkCore": {
+            "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.0, )"
             }
@@ -181,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

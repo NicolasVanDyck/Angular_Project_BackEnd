@@ -13,9 +13,11 @@ public partial class Game
 
     public int PlatformId { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
-    public ICollection<Content>? Contents { get; set; }
+    public DateTime? UpdatedAt { get; set; }
 
-    public  Platform? Platform { get; set; }
+    public  ICollection<Content>? Contents { get; set; }
+
+    public  Platform? Platform { get; set; } = null!;
 }

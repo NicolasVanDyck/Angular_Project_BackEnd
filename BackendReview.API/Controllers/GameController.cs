@@ -24,7 +24,7 @@ namespace BackendReview.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Game>>> GetGames()
         {
-            return await _context.Games.ToListAsync();
+            return await _context.Games.Include(p => p.Platform).ToListAsync();
         }
 
         // GET: api/Game/5

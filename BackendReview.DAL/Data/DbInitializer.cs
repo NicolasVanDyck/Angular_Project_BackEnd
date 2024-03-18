@@ -13,8 +13,8 @@ public class DbInitializer
         {
             var platforms = new Platform[]
             {
-                new Platform { Name = "Platform 1", CreatedAt = DateTime.Now },
-                new Platform { Name = "Platform 2", CreatedAt = DateTime.Now },
+                new Platform { Name = "Platform 1" },
+                new Platform { Name = "Platform 2" },
                 // Add more platforms as needed
             };
 
@@ -30,8 +30,8 @@ public class DbInitializer
         {
             var games = new Game[]
             {
-                new Game { Name = "Game 1", Publisher = "Publisher 1", PlatformId = 1, CreatedAt = DateTime.Now},
-                new Game { Name = "Game 2", Publisher = "Publisher 2", PlatformId = 2, CreatedAt = DateTime.Now},
+                new Game { Name = "Game 1", Publisher = "Publisher 1", PlatformId = 1},
+                new Game { Name = "Game 2", Publisher = "Publisher 2", PlatformId = 2},
                 // Add more games as needed
             };
 
@@ -47,8 +47,8 @@ public class DbInitializer
         {
             var varieties = new Variety[]
             {
-                new Variety { Name = "Review", CreatedAt = DateTime.Now },
-                new Variety { Name = "Walkthrough", CreatedAt = DateTime.Now },
+                new Variety { Name = "Review" },
+                new Variety { Name = "Walkthrough" },
                 // Add more varieties as needed
             };
         
@@ -64,8 +64,8 @@ public class DbInitializer
         {
             var contents = new Content[]
             {
-                new Content { Body = "Review 1", Score = 5, GameId = 1, VarietyId = 1, UserId = 1, CreatedAt = DateTime.Now },
-                new Content { Body = "Review 2", Score = 4, GameId = 2, VarietyId = 2, UserId = 2, CreatedAt = DateTime.Now },
+                new Content { Body = "Review 1", Score = 5, GameId = 1, VarietyId = 1, UserId = 1},
+                new Content { Body = "Review 2", Score = 4, GameId = 2, VarietyId = 2, UserId = 2},
                 // Add more content as needed
             };
 

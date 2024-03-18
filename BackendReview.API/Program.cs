@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ReviewDbContext>(options =>
-    options.UseMySQL(connectionString));
+    options.UseMySql("server=localhost;port=3307;database=ReviewDB;user=nicolas;password=sdfSDF123", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.3.0-mysql")));
 
 // Add JWT Authentication
 builder.Services.AddAuthentication().AddJwtBearer();
@@ -27,7 +27,7 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddControllers().AddJsonOptions(x =>
-    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 builder.Services.AddSwaggerService();
 
