@@ -59,7 +59,7 @@ public partial class ReviewDbContext : DbContext
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp")
                 .HasColumnName("updatedAt");
-            entity.Property(e => e.UserId).HasColumnName("userId");
+            entity.Property(e => e.UserName).HasColumnName("userName");
             entity.Property(e => e.VarietyId).HasColumnName("varietyId");
 
             entity.HasOne(d => d.Game).WithMany(p => p.Contents)
