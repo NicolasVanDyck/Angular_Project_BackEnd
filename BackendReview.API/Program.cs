@@ -17,10 +17,41 @@ builder.Services.AddAuthentication().AddJwtBearer();
 builder.Services.AddAuthorization(options =>
 {
     //We create different policies where each policy contains the permissions required to fulfill them
-    options.AddPolicy("DeleteAccess", policy =>
+    options.AddPolicy("ReadContent", policy =>
+        policy.RequireClaim("permissions", "read:content"));
+    options.AddPolicy("createContent", policy =>
+        policy.RequireClaim("permissions", "create:content"));
+    options.AddPolicy("updateContent", policy =>
+        policy.RequireClaim("permissions", "update:content"));
+    options.AddPolicy("DeleteContent", policy =>
         policy.RequireClaim("permissions", "delete:content"));
-    options.AddPolicy("GetAccess", policy =>
-        policy.RequireClaim("permissions", "getall:contents"));
+    
+    options.AddPolicy("ReadGame", policy =>
+        policy.RequireClaim("permissions", "read:game"));
+    options.AddPolicy("CreateGame", policy =>
+        policy.RequireClaim("permissions", "create:game"));
+    options.AddPolicy("UpdateGame", policy =>
+        policy.RequireClaim("permissions", "update:game"));
+    options.AddPolicy("DeleteGame", policy =>
+        policy.RequireClaim("permissions", "delete:game"));
+
+    options.AddPolicy("ReadPlatform", policy =>
+        policy.RequireClaim("permissions", "read:platform"));
+    options.AddPolicy("CreatePlatform", policy =>
+        policy.RequireClaim("permissions", "create:platform"));
+    options.AddPolicy("UpdatePlatform", policy =>
+        policy.RequireClaim("permissions", "update:platform"));
+    options.AddPolicy("DeletePlatform", policy =>
+        policy.RequireClaim("permissions", "delete:platform"));
+
+    options.AddPolicy("ReadVariety", policy =>
+        policy.RequireClaim("permissions", "read:variety"));
+    options.AddPolicy("CreateVariety", policy =>
+        policy.RequireClaim("permissions", "create:variety"));
+    options.AddPolicy("UpdateVariety", policy =>
+        policy.RequireClaim("permissions", "update:variety"));
+    options.AddPolicy("DeleteVariety", policy =>
+        policy.RequireClaim("permissions", "delete:variety"));
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 // builder.Services.AddEndpointsApiExplorer();

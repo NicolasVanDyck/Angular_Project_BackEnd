@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackendReview.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BackendReview.API.Controllers
 {
@@ -22,6 +23,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Platform
         [HttpGet]
+        [Authorize(Policy = "ReadPlatform")]
         public async Task<ActionResult<IEnumerable<Platform>>> GetPlatforms()
         {
             return await _context.Platforms.ToListAsync();
@@ -29,6 +31,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Platform/5
         [HttpGet("{id}")]
+        [Authorize(Policy = "ReadPlatform")]
         public async Task<ActionResult<Platform>> GetPlatform(int id)
         {
             var platform = await _context.Platforms.FindAsync(id);
@@ -44,6 +47,7 @@ namespace BackendReview.API.Controllers
         // PUT: api/Platform/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Policy = "UpdatePlatform")]
         public async Task<IActionResult> PutPlatform(int id, Platform platform)
         {
             if (id != platform.Id)
@@ -75,6 +79,7 @@ namespace BackendReview.API.Controllers
         // POST: api/Platform
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Policy = "CreatePlatform")]
         public async Task<ActionResult<Platform>> PostPlatform(Platform platform)
         {
             _context.Platforms.Add(platform);
@@ -85,6 +90,7 @@ namespace BackendReview.API.Controllers
 
         // DELETE: api/Platform/5
         [HttpDelete("{id}")]
+        [Authorize(Policy = "DeletePlatform")]
         public async Task<IActionResult> DeletePlatform(int id)
         {
             var platform = await _context.Platforms.FindAsync(id);

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackendReview.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BackendReview.API.Controllers
 {
@@ -22,6 +23,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Variety
         [HttpGet]
+        [Authorize(Policy = "ReadVariety")]
         public async Task<ActionResult<IEnumerable<Variety>>> GetVarieties()
         {
             return await _context.Varieties.ToListAsync();
@@ -29,6 +31,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Variety/5
         [HttpGet("{id}")]
+        [Authorize(Policy = "ReadVariety")]
         public async Task<ActionResult<Variety>> GetVariety(int id)
         {
             var variety = await _context.Varieties.FindAsync(id);
@@ -44,6 +47,7 @@ namespace BackendReview.API.Controllers
         // PUT: api/Variety/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Policy = "UpdateVariety")]
         public async Task<IActionResult> PutVariety(int id, Variety variety)
         {
             if (id != variety.Id)
@@ -75,6 +79,7 @@ namespace BackendReview.API.Controllers
         // POST: api/Variety
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Policy = "CreateVariety")]
         public async Task<ActionResult<Variety>> PostVariety(Variety variety)
         {
             _context.Varieties.Add(variety);
@@ -85,6 +90,7 @@ namespace BackendReview.API.Controllers
 
         // DELETE: api/Variety/5
         [HttpDelete("{id}")]
+        [Authorize(Policy = "DeleteVariety")]
         public async Task<IActionResult> DeleteVariety(int id)
         {
             var variety = await _context.Varieties.FindAsync(id);

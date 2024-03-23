@@ -64,8 +64,8 @@ public class DbInitializer
         {
             var contents = new Content[]
             {
-                new Content { Body = "Review 1", Score = 5, GameId = 1, VarietyId = 1, UserName = "User 1"},
-                new Content { Body = "Review 2", Score = 4, GameId = 2, VarietyId = 2, UserName = "User 2"},
+                new Content { Title = "Title 1", Body = "Review 1", Score = 5, GameId = 1, VarietyId = 1, UserName = "User 1", IsApproved = false},
+                new Content { Title = "Title 2", Body = "Review 2", Score = 4, GameId = 2, VarietyId = 2, UserName = "User 2", IsApproved = true},
                 // Add more content as needed
             };
 

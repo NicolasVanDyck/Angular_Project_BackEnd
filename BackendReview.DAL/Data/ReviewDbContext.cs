@@ -45,6 +45,9 @@ public partial class ReviewDbContext : DbContext
             entity.HasIndex(e => e.VarietyId, "varietyId");
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Title)
+                .HasMaxLength(255)
+                .HasColumnName("title");
             entity.Property(e => e.Body)
                 .HasColumnType("text")
                 .HasColumnName("body");
@@ -60,6 +63,7 @@ public partial class ReviewDbContext : DbContext
                 .HasColumnType("timestamp")
                 .HasColumnName("updatedAt");
             entity.Property(e => e.UserName).HasColumnName("userName");
+            entity.Property(e => e.IsApproved).HasColumnName("isApproved");
             entity.Property(e => e.VarietyId).HasColumnName("varietyId");
 
             entity.HasOne(d => d.Game).WithMany(p => p.Contents)

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BackendReview.DAL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BackendReview.API.Controllers
 {
@@ -22,6 +23,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Game
         [HttpGet]
+        [Authorize(Policy = "ReadGame")]
         public async Task<ActionResult<IEnumerable<Game>>> GetGames()
         {
             return await _context.Games.Include(p => p.Platform).ToListAsync();
@@ -29,6 +31,7 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Game/5
         [HttpGet("{id}")]
+        [Authorize(Policy = "ReadGame")]
         public async Task<ActionResult<Game>> GetGame(int id)
         {
             var game = await _context.Games.FindAsync(id);
@@ -44,6 +47,7 @@ namespace BackendReview.API.Controllers
         // PUT: api/Game/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Policy = "UpdateGame")]
         public async Task<IActionResult> PutGame(int id, Game game)
         {
             if (id != game.Id)
@@ -75,6 +79,7 @@ namespace BackendReview.API.Controllers
         // POST: api/Game
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Policy = "CreateGame")]
         public async Task<ActionResult<Game>> PostGame(Game game)
         {
             _context.Games.Add(game);
@@ -85,6 +90,7 @@ namespace BackendReview.API.Controllers
 
         // DELETE: api/Game/5
         [HttpDelete("{id}")]
+        [Authorize(Policy = "DeleteGame")]
         public async Task<IActionResult> DeleteGame(int id)
         {
             var game = await _context.Games.FindAsync(id);
