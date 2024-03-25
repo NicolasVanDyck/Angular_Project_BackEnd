@@ -23,7 +23,6 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Content
         [HttpGet]
-        [Authorize(Policy = "ReadContent")]
         public async Task<ActionResult<IEnumerable<Content>>> GetContents()
         {
             return await _context.Contents.Include(g => g.Game).Include(v => v.Variety).ToListAsync();
@@ -31,7 +30,6 @@ namespace BackendReview.API.Controllers
 
         // GET: api/Content/5
         [HttpGet("{id}")]
-        [Authorize(Policy = "ReadContent")]
         public async Task<ActionResult<Content>> GetContent(int id)
         {
             var content = await _context.Contents.FindAsync(id);
