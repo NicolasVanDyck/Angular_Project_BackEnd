@@ -11,7 +11,7 @@ public partial class Content
 
     public string Body { get; set; }
 
-    public int Score { get; set; }
+    public int? Score { get; set; }
 
     public int GameId { get; set; }
 
