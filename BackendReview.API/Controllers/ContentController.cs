@@ -36,7 +36,7 @@ namespace BackendReview.API.Controllers
         [AllowAnonymous]
         public async Task<ActionResult<Content>> GetContent(int id)
         {
-            var content = await _context.Contents.FindAsync(id);
+            var content = await _context.Contents.Include(c => c.Game).Include(v => v.Variety).FirstOrDefaultAsync(c => c.Id == id);
 
             if (content == null)
             {
